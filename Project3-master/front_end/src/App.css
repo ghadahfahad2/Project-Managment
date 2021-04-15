@@ -1,0 +1,297 @@
+.App {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #084e6e5d;
+  position: fixed;
+  display: flex;
+  width: 20%;
+  transition: all 0.5s ease;
+  font-size: 26px;
+  height: 100%;
+}
+.navbar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  user-select: none;
+  text-align: center;
+}
+.navbar ul {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+  list-style: none;
+}
+li {
+  width: 100%;
+  margin: 0;
+  padding: "40px";
+  color: aliceblue;
+}
+li:hover {
+  padding-left: 20px;
+}
+.main {
+  overflow-y: scroll;
+  width: 22%;
+  text-align: center;
+  left: 245px;
+  padding: "10px";
+  height: 100%;
+}
+.dropbtn {
+  background-color: #3c3a86;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #000000;
+}
+
+.projectList {
+  width: 150px;
+  height: 80px;
+  background-color: darkgray;
+  margin: 10px;
+}
+
+.card-header {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.memberList {
+  display: inline-flex !important;
+  justify-content: space-between;
+}
+
+.fa-trash,
+.fa-edit {
+  padding-top: 10px;
+}
+
+.details,
+.head {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.newProject {
+  width: 800px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 15px;
+  background-color: rgb(194, 175, 150);
+}
+
+/* css for new project */
+.items {
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+  cursor: pointer;
+  border: 3px dotted rgba(255, 255, 255, 0.74);
+  transition: all 0.6s;
+  background-color: rgb(163, 162, 162);
+  height: 150px;
+  width: 150px;
+}
+.items:hover {
+  border: 3px solid white;
+}
+
+.icon-wrapper,
+.project-name:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper {
+  font-size: 100px;
+  transform: translateY(0px);
+  transition: all 0.6s;
+}
+
+.icon-wrapper {
+  align-self: end;
+}
+
+.project-name {
+  align-self: center;
+  text-align: center;
+}
+.pragraphNewProject {
+  align-self: start;
+  font-size: 16;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(102, 3, 3);
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.projectList {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.cardlist {
+  display: flex;
+  height: 180px;
+  width: 200px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: -1rem 0 2rem rgba(51, 51, 54, 0.541);
+  /*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.cacardlistrd:not(:first-child) {
+  margin-left: -50px;
+}
+
+.cardlist:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.cardlist:hover ~ .cardlist {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+/* ////////// */
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 154, 217, 1) 0%,
+    rgba(217, 147, 0, 1) 65%,
+    rgba(255, 186, 0, 1) 100%
+  );
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: rgb(0, 0, 0);
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #dfdfdf;
+  stroke-width: 3px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+.line {
+  margin-top: 80px;
+}
+
+.cardlist{
+  display: inline-flex !important;
+}
